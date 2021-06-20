@@ -10,11 +10,9 @@ export class Controller {
         this.view = new View(this)
 
         this.model.addObserver(this.view)
-        this.updateTime()
     }
 
     updateTime() {
         this.model.setTime(Date.now())
     }
-
 }
