@@ -18,6 +18,17 @@ class TodoController {
 
         res.redirect('/')
     }
+
+    show(req, res) {
+        const { id } = req.params
+
+        const todo = this.todoModel.getTodo(id)
+
+        if(todo === undefined || todo === null) 
+            res.render('404')
+        else
+            res.render('todo', { todo })
+    }
 }
 
 module.exports = TodoController

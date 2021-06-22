@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVC</title>
-    <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
+<%- include('includes/header') -%>
 
-</head>
-<body>
-    <main>
-        <ul>
-            <% todos.forEach(todo=> { %>
-            <li>
-                <%= todo.text %>
-            </li>
-            <% }) %>
-        </ul>
-        <form method="POST" action="">
-            <input type="text" name="todoText" placeholder="Schreibe ein Todo">
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-</body>
-</html>
+<ul>
+    <% todos.forEach(todo=> { %>
+    <li>
+        <a href="todo/<%= todo.id %>">
+            <%= todo.text %>
+        </a>
+    </li>
+    <% }) %>
+</ul>
+<form method="POST" action="">
+    <input type="text" name="todoText" placeholder="Schreibe ein Todo">
+    <button type="submit">Submit</button>
+</form>
+
+<%- include('includes/footer') -%>

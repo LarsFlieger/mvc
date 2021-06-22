@@ -1,8 +1,6 @@
-<html>
-<link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css" />
+<%- include('includes/header') -%>
 
-<body>
-    <h2>Todo</h2>
-</body>
+<h2><%= todo.text %></h2>
+<p>This is the todo with the id: <%= todo.id %></p>
 
-</html>
+<%- include('includes/footer') -%>

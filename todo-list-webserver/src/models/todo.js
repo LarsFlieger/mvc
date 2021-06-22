@@ -11,6 +11,10 @@ class TodoModel {
         return this.todos
     }
 
+    getTodo(id) {
+        return this.todos.find(todo => todo.id == parseInt(id))
+    }
+
     addTodo(todoText) {
         this.todos.push({
             id: Math.max(...this.todos.map(todo => todo.id), 0) + 1,
