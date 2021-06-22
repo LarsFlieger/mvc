@@ -19,6 +19,7 @@ export class Controller {
         this.model.addTodo(todoText)
     }
 
+    // Bridge for getting todos
     displayTodos() {
         const todos: Todo[] = this.model.getTodos()
         this.view.update(todos)

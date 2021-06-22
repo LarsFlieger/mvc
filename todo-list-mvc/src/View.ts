@@ -26,6 +26,7 @@ export class View {
         button.textContent = 'Add Todo'
         this.root.append(button)
 
+        // Create button to get latest todos
         const updateList = document.createElement('button')
         updateList.onclick = () => {
             controller.displayTodos()
