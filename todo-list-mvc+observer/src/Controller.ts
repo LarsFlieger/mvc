@@ -15,7 +15,7 @@ export class Controller {
 
     // Bridge for input data
     addTodo(todoText: string) {
-        //TODO: Where should be the data validation? Should say something to the view?
+        // Data validation
         if(todoText === '')
             return
             
