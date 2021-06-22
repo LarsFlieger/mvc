@@ -1,3 +1,4 @@
 import { Controller } from "./Controller";
 
-const controller = new Controller()
+// Starts application
+new Controller()
